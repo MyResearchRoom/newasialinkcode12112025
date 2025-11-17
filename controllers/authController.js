@@ -647,7 +647,7 @@ const authController = {
                 from: process.env.EMAIL_USER,
                 to: user.email,
                 subject: "Password reset request",
-                html: `<p>You requested for a password reset. Click <a href="${process.env.CLIENT_URL}/reset-password/${resetToken}">here</a> to reset your password. The link will expire in 1 hour.</p>`
+                html: `<p>You requested for a password reset. Click <a href="${process.env.CLIENT_EMAIL_URL}/reset-password/${resetToken}">here</a> to reset your password. The link will expire in 1 hour.</p>`
             }
 
             await transporter.sendMail(mailOptions);
